@@ -1,0 +1,44 @@
+.business {
+	padding-top: 0px;
+}
+
+.business__thumb {
+	position: relative;
+	z-index: -1;
+}
+
+.business__description-thumb {
+	
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	bottom: 0;
+	right: 0;
+
+	display: flex;
+	justify-content: center;
+
+	@include flex ($ai: null);
+
+	padding: 27px;
+	
+	background: rgba(47, 48, 58, 0.8);
+}
+
+.business__description-text {
+
+	color: var(--primary-background-color);
+
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.4;
+	text-align: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 480px){
+	.business {
+		display: none;
+	}
+}

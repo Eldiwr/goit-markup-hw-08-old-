@@ -1,0 +1,103 @@
+body {
+
+	background-color: var(--primary-background-color);
+	color: var(--primary-font-color);
+
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+}
+/* Обнуление/Скрытие элементов/общие стили */
+
+.list {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.no-title {
+	display: none;
+}
+
+.link {
+	color: inherit;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0px;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* .is-hidden {
+	opacity: 0;
+	pointer-events: none;
+} */
+
+.title {
+	margin-bottom: 50px;
+	color: var(--secondary-font-color);
+
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.7;
+	text-align: center;
+	letter-spacing: 0.03em;
+}
+
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+.current {
+	color: var(--focus-color);
+}
+
+.nav-list__item {
+	position: relative;
+}
+
+.current::after {
+
+	position: absolute;
+
+	display: block;
+
+	content:'';
+
+	width: 100%;
+	height: 4px;
+	left: 0;
+	bottom: -1px;
+
+	background: var(--focus-color);
+	border-radius: 2px;
+
+	@include tab {
+
+		bottom: -17px;
+
+	}
+		
+}
+
+.item:not(:last-child){
+	margin-right: 30px;
+}
+
+.item.thumb {
+	position: absolute;
+}

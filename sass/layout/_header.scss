@@ -1,0 +1,316 @@
+.header-page {
+	width: 100%;
+	top: 0;
+	left: 0;
+
+	border-bottom: 1px solid #ececec;
+
+	background-color: var(--primary-background-color);
+}
+
+.header-page__div {
+	display: flex;
+	align-items: center;	
+}
+/* -----For logo----- */
+
+.header-page__logo {
+	// margin-right: 93px;
+	// padding-top: 24px;
+	// padding-bottom: 25px;
+
+	color: var(--secondary-font-color);
+
+	font-family: 'Raleway', sans-serif;
+
+	padding-top: 16px;
+	padding-bottom: 16px;
+
+	@include font (700, 24px, 1.16, 0.03em);
+
+	transition: color var(--time-function);
+
+	&:hover{
+	color: var(--focus-color);
+	}
+
+	@include tab {
+		margin-right: 88px;
+	}
+
+	@include desk {
+		margin-right: 93px;
+
+		@include font (700, 26px, 1.2, 0.03em);
+	}
+}
+
+.header-page__logo-span {
+	color: var(--focus-color);
+}
+
+/* -----Navigation----- */
+
+
+	.nav-list {
+		display: none;
+
+		@include tab {
+			display: flex;	
+		}
+	}
+
+	.nav-list__item {
+
+	color: var(--secondary-font-color);
+
+	@include font (500, 14px, 1.4, 0.02em);
+
+	&:not(:last-child) {
+	margin-right: 50px;
+	}
+}
+
+.nav-list__link {
+	display: block;
+
+	padding-top: 32px;
+	padding-bottom: 28px;
+
+	transition: color var(--time-function);
+
+	&:hover,
+	&:focus {
+	color: var(--focus-color);
+	}
+}
+
+/* -----Contacts----- */
+
+.contacts-header {
+	
+	display: none;
+	margin-left:auto;
+
+	@include font (500, 14px, 1.4, 0.02em);
+
+	@include tab {
+		display: block;
+	}
+}
+
+.contacts-header__link {
+	@include flex ($jc: null);
+
+	// padding-top: 32px;
+	// padding-bottom: 32px;
+
+	transition: color var(--time-function);
+	&:hover,
+	&:focus{
+	color: var(--focus-color);
+	}
+
+	@include tab {
+		@include font (500, 12px, 1.16, 0.02em)
+
+	}
+
+}
+
+.contacts-header__item {
+	display: flex;
+
+	&:first-child{
+		margin-bottom: 10px;
+	}
+}
+@include desk {
+	.contacts-header__item:not(:last-child) {
+	margin-right: 50px;
+	}
+}
+
+
+.contacts-header__mail-icon {
+
+	width: 16px;
+	height: 12px;
+	margin-right: 10px;
+	fill: currentColor;
+
+	@include tab {
+		width: 14px;
+		height: 10px;
+	}
+}
+
+.contacts-header__phone-icon {
+	width: 10px;
+	height: 16px;
+	margin-right: 10px;
+	fill: currentColor;
+
+	@include tab {
+		width: 10px;
+		height: 14px;
+	}
+}
+
+// Header for mob and tab 
+
+.header-page__menu-button {
+	display: block;
+	margin-left: auto;
+
+	width: 40px;
+	height: 40px;
+
+	background-color: var(--primary-background-color);
+	border: none;
+
+	transition: fill var(--time-function);
+
+    &:hover,
+    &:focus {
+	fill: var(--focus-color);
+    }
+
+	@include tab {
+		display: none;
+	}
+
+}
+
+.mob-menu__close-button {
+
+	display: block;
+
+	position: absolute;
+
+	cursor: pointer;
+
+	top: 0;
+	right: 0;
+
+	margin-top: 10px;
+	margin-right: 15px;
+
+	width: 40px;
+	height: 40px;
+
+	background-color: var(--primary-background-color);
+	border: none;
+
+	transition: fill var(--time-function);
+
+    &:hover,
+    &:focus {
+	fill: var(--focus-color);
+    }
+
+}
+
+.mob-menu {
+	position: fixed;
+
+	top: 0;
+	left: 0;
+
+	padding-top: 48px;
+	padding-bottom: 48px;
+	padding-left: 40px;
+	padding-right: 40px;
+
+	z-index: 999;
+
+	width: 100vw;
+	height: 100vh;
+
+	background-color: var(--primary-background-color);
+}
+
+.mob-menu.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.mob-menu__group-div {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+}
+
+.mob-list__item {
+
+	@include font (500, 40px, 1.2, 0.02em);
+
+	color: var(--secondary-font-color);
+
+	&:not(:last-child){
+		margin-bottom: 32px;
+	}
+}
+
+.mob-list__link {
+
+	transition: fill var(--time-function);
+
+    &:hover,
+    &:focus {
+	color: var(--focus-color);
+    }
+}
+
+.mob-menu-contacts__item-tel {
+
+	margin-bottom: 32px;
+
+	
+	@include font (500, 34px, 1.2, 0.02em);
+}
+
+.mob-menu-contacts__item-mail {
+
+	@include font (500, 24px, 1.2, 0.02em);
+
+}
+
+.mob-menu-contacts__link {
+
+	transition: fill var(--time-function);
+
+    &:hover,
+    &:focus {
+	color: var(--focus-color);
+    }
+
+}
+
+.mob-menu__social-list {
+
+	display: flex;
+
+	margin-top: 64px;
+
+	@include font (500, 18px, 1.2, 0.02em);
+
+	color: var(--focus-color);
+
+	.mob-menu__social-item {
+
+		padding-right: 10px;
+		border-right: 1px solid rgba(33,33,33,0.2);
+
+		&:not(:last-child){
+			margin-right: 20px;
+		}
+	}
+
+}
+
+
+
+
