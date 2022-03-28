@@ -4,9 +4,19 @@
 
 .filter__list {
 	display: flex;
+	flex-wrap: wrap;
+
 	// justify-content: center;
 	// @include flex ($ai: null);
 	margin-bottom: 50px;
+
+	@include tab {
+
+		justify-content: center;
+		align-content: center;
+		flex-wrap: nowrap;
+
+	}
 }
 
 .filter__button {
@@ -36,10 +46,6 @@
     }
 }
 
-.filter__list {
-	flex-wrap: wrap;
-}
-
 .filter__item:not(:last-child) {
 	margin-right: 8px;
 }
@@ -48,3 +54,14 @@
 	margin-top: 15px;
 }
 
+@include tab {
+	.filter__item:nth-last-child(-n + 2) {
+	margin-top: 0px;
+	}
+}
+
+@include tab {
+	.filter__item:nth-last-child(-n + 2) {
+	margin-top: 0px;
+	}
+}

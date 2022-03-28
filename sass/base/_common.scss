@@ -37,8 +37,7 @@ p {
 
 img {
 	display: block;
-	width: 100%;
-	height: auto;
+	
 }
 
 /* .is-hidden {
@@ -58,8 +57,9 @@ img {
 }
 
 .section {
-	padding-top: 94px;
-	padding-bottom: 94px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+
 }
 
 .current {
@@ -85,13 +85,7 @@ img {
 
 	background: var(--focus-color);
 	border-radius: 2px;
-
-	@include tab {
-
-		bottom: -17px;
-
-	}
-		
+	
 }
 
 .item:not(:last-child){
